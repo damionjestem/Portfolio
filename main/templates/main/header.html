@@ -1,7 +1,7 @@
 <head>
     {% load static %}
     <!-- Prism CSS -->
-    <link href="{% static 'tinymce/css/prism.css' %}" rel="styleshet">
+    <link rel="styleshet" href="{% static 'tinymce/css/prism.css' %}">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript for Materialize CSS -->
@@ -16,6 +16,7 @@
         </ul>
     </div>
   </nav>
+
   {% include 'main/includes/messages.html' %}
 
 {% block content %}
