@@ -1,0 +1,23 @@
+{% extends 'main/header.html' %}
+
+
+{% block content %}
+
+<div class="row">
+    {% for item in items %}
+    <div class="col s12 m6 l3">
+        <div class="card hoverable">
+            <div class="card-content grey-text text-darken-3">
+                <span class="card-title">{{ item.item_title }}</span>
+                <p>{{ item.item_published | safe }}</p>
+                <p>{{ item.item_content | safe }}</p>
+                <div class="card-action">
+                    <a href="#">Let's go!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
