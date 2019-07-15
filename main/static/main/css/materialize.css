@@ -2509,6 +2509,15 @@ input[type=range] + .thumb {
 .no-padding {
   padding: 0 !important; }
 
+/**
+* Padding for sidebar
+*/
+header, main, footer {
+  padding-left: 300px; }
+
+@media only screen and (max-width: 992px) {
+  header, main, footer {
+    padding-left: 0; } }
 span.badge {
   min-width: 3rem;
   padding: 0 6px;

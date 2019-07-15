@@ -7,13 +7,14 @@
     <!-- Compiled and minified JavaScript for Materialize CSS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-
+    <!-- Padding for side bar -->
+    <link href='{% static "main/css/style.css" %}' rel="stylesheet">
 </head>
 <body>
-{% include 'main/includes/navbar_items.html' %}
+{% include 'main/includes/navbar.html' %}
 {% include 'main/includes/messages.html' %}
 
-<div class="container">
+<div class="container main">
     <br>
     {% block content %}
     {% endblock %}
