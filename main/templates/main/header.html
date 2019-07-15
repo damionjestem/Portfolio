@@ -1,28 +1,25 @@
 <head>
     {% load static %}
     <!-- Prism CSS -->
-    <link rel="styleshet" href="{% static 'tinymce/css/prism.css' %}">
+    <link href='{% static "tinymce/css/prism.css" %}' rel="styleshet">
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href='{% static "main/css/materialize.css" %}' rel="stylesheet">
     <!-- Compiled and minified JavaScript for Materialize CSS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
 </head>
 <body>
-  <nav>
-    <div class="nav-wrapper grey darken-3">
-      <a href="/" class="brand-logo">Damian Lesiewicz</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            {% include 'main/includes/navbar_items.html' %}
-        </ul>
-    </div>
-  </nav>
+{% include 'main/includes/navbar_items.html' %}
+{% include 'main/includes/messages.html' %}
 
-  {% include 'main/includes/messages.html' %}
+<div class="container">
+    <br>
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
 
-{% block content %}
-{% endblock %}
 
 <!-- Prism JS -->
 <script src="{% static 'tinymce/js/prism.js' %}"></script>
-
-</body>
