@@ -2,7 +2,7 @@
 * Padding for sidebar
 */
 .header, .main, .footer {
-      padding-left: 300px;
+      padding-left: 200px;
     }
 
     @media only screen and (max-width : 992px) {
